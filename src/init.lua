@@ -4,7 +4,7 @@ Pathfind.__index = Pathfind
 
 export type Pathfinder<T> = (start:T, finish:T) -> ({[number]: T})
 
-Pathfind.Dijkstra = function<T>(network: {[T]: {[number]: T}}, scoreFunction: ((a: T, b: T) -> number)): Pathfinder<T>
+Pathfind.dijkstra = function<T>(network: {[T]: {[number]: T}}, scoreFunction: ((a: T, b: T) -> number)): Pathfinder<T>
 
 	local weightedNetwork: {[T]: {[T]: number}} = {}
 	for s, connections in pairs(network) do
