@@ -71,9 +71,11 @@ Pathfind.dijkstra = function<T>(network: {[T]: {[number]: T}}, scoreFunction: ((
 				local closestDist = math.huge
 				local closestNode = nil
 				for i, otherNode: T in ipairs(network[node] or {}) do
-					local otherDist = distances[otherNode]
-					if otherDist < closestDist then
-						closestNode = otherNode
+					if table.find(path, otherNode) == nil then
+						local otherDist = distances[otherNode]
+						if otherDist < closestDist then
+							closestNode = otherNode
+						end
 					end
 				end
 				if closestNode then
