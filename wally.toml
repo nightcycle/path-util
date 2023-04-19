@@ -1,8 +1,11 @@
 [package]
 name = "nightcycle/path-util"
 description = "A package!"
-version = "1.0.4"
+version = "2.0.3"
 authors = ["CJ Oyer <coyer@nightcycle.us>"]
 realm = "shared"
 registry = "https://github.com/upliftgames/wally-index"
 exclude = ["Packages", ".vscode"]
+
+[dependencies]
+TableUtil = "nightcycle/table-util@^1.1.0"
