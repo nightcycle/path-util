@@ -1,2 +1,2 @@
-# package
-A basic template for whenever I make a wally package
+# path-util
+A place where I put various pathfinding functions
